@@ -38,6 +38,21 @@ export async function getStaticProps({ params, preview = false }) {
             value
             blocks {
               __typename
+              ... on FormRecord {
+                id
+                typeform
+                _createdAt
+                _firstPublishedAt
+                _isValid
+                _modelApiKey
+                _publicationScheduledAt
+                _publishedAt
+                _status
+                _unpublishingScheduledAt
+                _updatedAt
+                createdAt
+                updatedAt
+              }
               ...on ImageBlockRecord {
                 id
                 image {
